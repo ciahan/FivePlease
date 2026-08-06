@@ -1,13 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    host: '127.0.0.1', // Forces a clean local network route instead of localhost loopback
-    watch: {
-      usePolling: true, // Forces Vite to manually check for file saves on Mac
-    },
-  },
+  plugins: [
+    react(),
+    tailwindcss(), //
+  ],
 })

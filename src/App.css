@@ -1,3 +1,40 @@
+@reference "./index.css";
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.4rem;
+  border-bottom: 1px solid var(--darkPink);
+
+  background-color: var(--lightPink);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  @media (min-width: 768px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -14,6 +51,67 @@
   &:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
+  }
+}
+
+.subjectCard {
+  background-color: var(--lightPurple);
+  border: 1px solid var(--darkPurple);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  padding: 3rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (min-width: 768px) {
+    padding: 5rem;
+  }
+}
+
+.container {
+  background-color: var(--lightPurple);
+  border: 1px solid var(--darkPurple);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @media (min-width: 768p) {
+    padding: 5rem;
+  }
+}
+
+.container2 {
+  background-color: var(--lightYellow);
+  border: 1px solid var(--darkYellow);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (min-width: 768p) {
+    padding: 3rem;
   }
 }
 
@@ -180,5 +278,13 @@
   &::after {
     right: 0;
     border-right-color: var(--border);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding-top: 5rem;
+    padding-left: 13rem;
+    padding-right: 13rem;
   }
 }

@@ -1,12 +1,76 @@
 @import "tailwindcss";
 
-@theme {
-  --color-text: var(--text);
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
 
+  & a {
+    &:hover {
+      text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor;
+      text-decoration: underline;
+    }
+  }
+
+  & span {
+    &:hover {
+      cursor: pointer;
+      text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor;
+      text-decoration: underline;
+    }
+  }
+}
+
+.navItemWithDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* The dropdown container (hidden by default) */
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Positions it directly below the nav link */
+  right: 0;
+  background-color: var(--lightGreen); /* Match your app background */
+  min-width: 160px;
+  border: 1px solid var(--darkGreen);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  z-index: 10;
+}
+
+/* Dropdown links */
+.dropdownMenu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Show the dropdown menu when hovering over the wrapper */
+.navItemWithDropdown:hover .dropdownMenu {
+  display: flex;
+  flex-direction: column;
 }
 
 :root {
   --text: #2d2a3d;
+  --lightGreen: #deffdb;
+  --darkGreen: #2f6b3a;
+  --lightPink: #ffe3fa;
+  --darkPink: #a3348f;
+  --lightYellow: #fffdd0;
+  --darkYellow: #8a7a1a;
+  --lightPurple: #e7d1ff;
+  --darkPurple: #6b3fa0;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
@@ -30,11 +94,18 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;  
+}
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;  
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,43 +132,32 @@ body {
   margin: 0;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
 h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
 }
 
 h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
-  margin: 32px 0;
+  margin: 0px 0;
   @media (max-width: 1024px) {
     font-size: 36px;
-    margin: 20px 0;
+    margin: 0px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
-  margin: 0 0 8px;
+  margin: 0 0 0px;
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
