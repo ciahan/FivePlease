@@ -5,7 +5,7 @@
   align-items: center;
   gap: 2.5rem;
   margin-left: auto;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: var(--text);
 
@@ -63,24 +63,28 @@
 
 :root {
   --text: #2d2a3d;
+  --text2: #4c485f;
+  --shadow: rgba(45, 42, 61, 0.377);
+  --shadow2: rgb(45, 42, 61, 0.5);
+  --lighterGreen: #f9fff9;
   --lightGreen: #deffdb;
   --darkGreen: #2f6b3a;
   --lightPink: #ffe3fa;
+  --mediumPink: lab(61.96% 53.07 -26.71);
   --darkPink: #a3348f;
   --lightYellow: #fffdd0;
   --darkYellow: #8a7a1a;
   --lightPurple: #e7d1ff;
+  --mediumPurple: lab(52.67% 44.88 -50.89);
   --darkPurple: #6b3fa0;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: var(--lightGreen);
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -130,49 +134,52 @@
 
 body {
   margin: 0;
+  font-family: "Playfair Display", serif;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
+.highlight-text {
+  background-color: var(--lightPink);
+}
+
+.underline-text {
+  text-decoration: underline var(--text) 3px solid;
+  text-underline-offset: 4px;
+}
+
+.h0 {
+  font-weight: 500;
+  font-size: 60px;
+  letter-spacing: -2px;
+  line-height: 100%;
+}
+
+h0 {
+  font-weight: 500;
+  font-size: 60px;
+  letter-spacing: -2px;
+  line-height: 100%;
+}
+
+h1, h2 {
   font-weight: 500;
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 36px;
   letter-spacing: -1.68px;
-  margin: 0px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 0px 0;
-  }
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 118%;
+  font-size: 26px;
+  line-height: 140%;
   letter-spacing: -0.24px;
-  margin: 0 0 0px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+  color: var(--text2)
+}
+
+h3 {
+  font-size: 20px;
 }
 
 p {
   margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
 }
