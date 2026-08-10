@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 <style>
@@ -199,12 +196,12 @@ const TeamMembers = {
       name: "Rebecca Lemiesa",
       headshot: "rebecca_headshot.png",
       role: "Content Director",
-      bio: "",
+      bio: "Rebecca Lemiesa is a rising junior at Montgomery Blair High School who sees herself as an avid enjoyer of dealing with intricate topics in STEM based fields, particularly in biomedical sciences. Channeling her energy through activities like debate tournaments, violin performances, tennis matches, leading church services, and even designing architectural structures through gaming platforms, Rebecca pours her passion in many different things! After tiring days, she often finds herself indulging in deep but silly convos with her close friend during neighborhood walks.",
     },
     {
       id: "alicez",
       name: "Alice Zhang",
-      headshot: "",
+      headshot: "alice_headshot.png",
       role: "Recruitment Director",
       bio: "Alice Zhang is a rising junior at Wayzata High School. Outside of school, she enjoys playing the piano, reading, doing martial arts, and ice skating. Her favorite AP Class was Music Theory. In school, she leads the Biology Club and Neuroscience Club, and occasionally goes on side quests with her friends to the woods and ponds by her school.",
     },
@@ -234,6 +231,24 @@ const TeamMembers = {
   ],
 }
 
+export function Footer() {
+  return (
+    <footer className="footer">
+      <p>
+        <strong> Disclaimer: </strong>
+        The information provided on this website may not be completely accurate,
+        especially if there have been recent changes to AP exam content, format,
+        or scoring guidelines. We recommend always verifying information with official
+        College Board resources. This site is not affiliated with or endorsed by the
+        College Board.
+      </p>
+      <p>
+        © 2026 FivePlease! All resources are provided free of charge.
+      </p>
+    </footer>
+  )
+}
+
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedSubject, setSelectedSubject] = useState(null);
@@ -256,7 +271,7 @@ function App() {
             (e) => { e.preventDefault(); setCurrentPage('home'); }
           }
         >
-          APNoteShare
+          FivePlease!
         </a>        {/* Navigation buttons */}
         <nav className="navButtons">
           <a 
@@ -505,13 +520,41 @@ function App() {
               {/* OUR MISSION TEXT */}
               <div className="flex flex-col gap-6">
                 <h2>
-                  AP Note Share was created with a simple goal: to make high-quality AP exam preparation accessible to all students, regardless of their financial situation.
+                  fiveplease.org was created with a very simple goal in mind.
+                  However, to explain how it was created, we must start at the very beginning. 
                 </h2>
                 <h2>
-                  All notes are hosted on RemNote for easy studying with spaced repetition. We also curate free resources from across the web to help you prepare for your exams.
+                  In freshman year, I was trying to find resources for my APUSH class
+                  (anybody who took it knows how many acts there were!). However, as I tried to
+                  scour the internet for free notes, I was constantly blocked by paywalls. 
                 </h2>
                 <h2>
-                  Everything here is 100% free — no sign-ups, no subscriptions, no hidden costs.
+                  The cheapest textbooks at the local bookstore cost over $20 each.
+                  When I tried the local library, many of the books I wanted were checked out
+                  with months-long wait times.
+                </h2>
+                <h2>
+                  I wanted something to change. So, throughout the past couple of years, Ciara
+                  and I have been writing notes for all of the different APs that we took, from
+                  AP Gov to AP Bio. I would often share these notes to Discord servers, with the
+                  hope that some students would be able to find these resources helpful in their
+                  own journey. 
+                </h2>
+                <h2>
+                  During the summer of junior year, I realized that something could be done to
+                  help make these notes available to all students across the world. Students that
+                  couldn’t afford textbooks or resources could use our notes and become successful
+                  exam takers. That was how the idea of fiveplease.org started. 
+                </h2>
+                <h2>
+                  Of course, we needed help to help make this project successful. We recruited our
+                  friends and also students that we met along our academic journeys to help with
+                  our mission of making AP exam success achievable for all. 
+                </h2>
+                <h2>
+                  We truly believe that financial barriers shouldn't determine students’ access to
+                  resources. FivePlease! exists to break these barriers and give all students the
+                  opportunity to succeed, regardless of their background. 
                 </h2>
               </div>
             </div>
@@ -527,7 +570,7 @@ function App() {
               {/* Executives */}
               <div className="flex flex-col items-center">
                 <img
-                  src={'/Banners/ExecutivesBanner.png'}
+                  src={'/src/assets/Banners/ExecutivesBanner.png'}
                   style={{ width: '375px', height: 'auto'}}
                 />
               </div>
@@ -544,7 +587,7 @@ function App() {
                       <h2> {member.role} </h2>
                     </div>
                     <img
-                      src={`/Headshots/${member.headshot}`}
+                      src={`/src/assets/Headshots/${member.headshot}`}
                       style={{ width: '300px', height: 'auto' }}
                     />
                     <h3> {member.bio} </h3>
@@ -555,7 +598,7 @@ function App() {
               {/* COURSE MANAGERS */}
               <div className="flex flex-col items-center">
                 <img
-                  src={'/Banners/CourseManagersBanner.png'}
+                  src={'/src/assets/Banners/CourseManagersBanner.png'}
                   style={{ width: '450px', height: 'auto'}}
                 />
               </div>
@@ -572,7 +615,7 @@ function App() {
                       <h2> {member.role} </h2>
                     </div>
                     <img
-                      src={`/Headshots/${member.headshot}`}
+                      src={`/src/assets/Headshots/${member.headshot}`}
                       style={{ width: '300px', height: 'auto' }}
                     />
                     <h3> {member.bio} </h3>
@@ -584,6 +627,8 @@ function App() {
         )}
       </main>
       {/* PAGES END */}
+
+      <Footer/>
     </>
   )
 }
