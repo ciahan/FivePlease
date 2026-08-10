@@ -91,10 +91,6 @@
     transform: translateY(-1px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
-
-  @media (min-width: 768px) {
-    padding: 5rem;
-  }
 }
 
 .category {
@@ -160,10 +156,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-
-  @media (min-width: 768p) {
-    padding: 5rem;
-  }
 }
 
 .container2 {
@@ -178,10 +170,6 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-
-  @media (min-width: 768p) {
-    padding: 3rem;
-  }
 }
 
 .teamMembers {
