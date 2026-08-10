@@ -135,10 +135,6 @@
     transform: translateY(-1px);
     box-shadow: 2px 4px 7px var(--shadow2);
   }
-
-  @media (min-width: 768p) {
-    padding: 5rem;
-  }
 }
 
 .backButton {
