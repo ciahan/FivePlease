@@ -196,7 +196,7 @@ const TeamMembers = {
       name: "Rebecca Lemiesa",
       headshot: "rebecca_headshot.png",
       role: "Content Director",
-      bio: "Rebecca Lemiesa is a rising junior at Montgomery Blair High School who sees herself as an avid enjoyer of dealing with intricate topics in STEM based fields, particularly in biomedical sciences. Channeling her energy through activities like debate tournaments, violin performances, tennis matches, leading church services, and even designing architectural structures through gaming platforms, Rebecca pours her passion in many different things! After tiring days, she often finds herself indulging in deep but silly convos with her close friend during neighborhood walks.",
+      bio: "Rebecca Lemiesa is a rising junior at Montgomery Blair High School interested in biomed! She channels her energy into things like debate, violin, tennis, leading church services, and even plays around with housing and landscaping designs on gaming platforms. After tiring days, Rebecca enjoys deep but silly conversations with a close friend during neighborhood walks."
     },
     {
       id: "alicez",
@@ -459,7 +459,7 @@ function App() {
                 </div>
 
                 {/* SUBJECTS DASHBOARD */}
-                <>
+                <div className="flex flex-col gap-3">
                   {[...filteredSubjects]
                     .sort((a, b) => a.title.localeCompare(b.title)) // sort by alphabetical order
                     .map((subject) => (
@@ -471,7 +471,7 @@ function App() {
                         <h1>{subject.title}</h1>
                       </div>
                     ))}
-                </>
+                </div>
 
                 {/* NO MATCHING SUBJECTS MESSAGE (only relevant if something has been entered in the search bar) */}
                 {filteredSubjects.length === 0 && (
@@ -542,7 +542,7 @@ function App() {
               {/* OUR MISSION TEXT */}
               <div className="flex flex-col gap-8">
                 <h2>
-                  fiveplease.org was created with a very simple goal in mind.
+                  <span className="highlight-text">fiveplease.org</span> was created with a very simple goal in mind.
                   However, to explain how it was created, we must start at the very beginning. 
                 </h2>
                 <div className="flex gap-4 items-center">
@@ -589,7 +589,7 @@ function App() {
                     During the summer of junior year, I realized that something could be done to
                     help make these notes available to all students across the world. Students that
                     couldn’t afford textbooks or resources could use our notes and become successful
-                    exam takers. That was how the idea of fiveplease.org started. 
+                    exam takers. That was how the idea of <span className="highlight-text">fiveplease.org</span> started. 
                   </h2>
                 </div>
                 <div className="flex gap-4 items-center">

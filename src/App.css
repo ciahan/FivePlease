@@ -75,10 +75,10 @@
 .subjectCard {
   background-color: var(--lightPurple);
   border: 1px solid var(--darkPurple);
-  border-radius: 16px;
+  border-radius: 24px;
   box-shadow: var(--shadow);
   box-sizing: border-box;
-  padding: 3rem;
+  padding: 2.5rem;
   width: 100%;
 
   display: flex;
