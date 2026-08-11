@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AP NoteShare</title>
+    <title>FivePlease!</title>
+
+    <script>
+      (function () {
+        const redirectPath = sessionStorage.getItem("redirectPath");
+
+        if (redirectPath) {
+          sessionStorage.removeItem("redirectPath");
+          window.history.replaceState(null, "", redirectPath);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
