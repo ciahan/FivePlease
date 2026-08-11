@@ -534,13 +534,13 @@ function App() {
                     scour the internet for free notes, I was constantly blocked by paywalls. 
                   </h2>
                   <img
-                    src={'/src/assets/About/about1.png'}
+                    src={'/About/about1.png'}
                     style={{width: '200px', height: 'auto'}}
                   />
                 </div>
                 <div className="flex gap-4 items-center">
                   <img
-                    src={'/src/assets/About/about2.png'}
+                    src={'/About/about2.png'}
                     style={{width: '200px', height: 'auto'}}
                   />
                   <h2>
@@ -558,13 +558,13 @@ function App() {
                     own journey. 
                   </h2>
                   <img
-                    src={'/src/assets/About/about3.png'}
+                    src={'/About/about3.png'}
                     style={{width: '200px', height: 'auto'}}
                   />
                 </div>
                 <div className="flex gap-4 items-center">
                   <img
-                    src={'/src/assets/About/about4.png'}
+                    src={'/About/about4.png'}
                     style={{width: '200px', height: 'auto'}}
                   />
                   <h2>
@@ -581,7 +581,7 @@ function App() {
                     our mission of making AP exam success achievable for all. 
                   </h2>
                   <img
-                    src={'/src/assets/About/about5.png'}
+                    src={'/About/about5.png'}
                     style={{width: '200px', height: 'auto'}}
                   />
                 </div>
@@ -604,7 +604,7 @@ function App() {
               {/* Executives */}
               <div className="flex flex-col items-center">
                 <img
-                  src={'/src/assets/Banners/ExecutivesBanner.png'}
+                  src={'/Banners/ExecutivesBanner.png'}
                   style={{ width: '375px', height: 'auto'}}
                 />
               </div>
@@ -621,7 +621,7 @@ function App() {
                       <h2> {member.role} </h2>
                     </div>
                     <img
-                      src={`/src/assets/Headshots/${member.headshot}`}
+                      src={`/Headshots/${member.headshot}`}
                       style={{ width: 'auto', height: '400px' }}
                     />
                     <h3> {member.bio} </h3>
@@ -632,7 +632,7 @@ function App() {
               {/* COURSE MANAGERS */}
               <div className="flex flex-col items-center">
                 <img
-                  src={'/src/assets/Banners/CourseManagersBanner.png'}
+                  src={'/Banners/CourseManagersBanner.png'}
                   style={{ width: '450px', height: 'auto'}}
                 />
               </div>
@@ -649,8 +649,8 @@ function App() {
                       <h2> {member.role} </h2>
                     </div>
                     <img
-                      src={`/src/assets/Headshots/${member.headshot}`}
-                      style={{ width: '300px', height: 'auto' }}
+                      src={`/Headshots/${member.headshot}`}
+                      style={{ width: 'auto', height: '400px' }}
                     />
                     <h3> {member.bio} </h3>
                   </div>
