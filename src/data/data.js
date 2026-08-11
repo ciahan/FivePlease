@@ -2,6 +2,7 @@ export const AP_SubjectsData = [
   {
     id: "us-history",
     title: "AP US History",
+    slug: "ap-us-history",
     category: "History",
     notes: [
       {
@@ -18,6 +19,7 @@ export const AP_SubjectsData = [
   {
     id: "us-gov",
     title: "AP US Government",
+    slug: "ap-us-government",
     category: "History",
     notes: [
       {
@@ -34,6 +36,7 @@ export const AP_SubjectsData = [
   {
     id: "psych",
     title: "AP Psychology",
+    slug: "ap-psychology",
     category: "Social Sciences",
     notes: [
       {
@@ -50,6 +53,7 @@ export const AP_SubjectsData = [
   {
     id: "world-history",
     title: "AP World History",
+    slug: "ap-world-history",
     category: "History",
     notes: [
     ],
@@ -57,6 +61,7 @@ export const AP_SubjectsData = [
   {
     id: "micro",
     title: "AP Microeconomics",
+    slug: "ap-microeconomics",
     category: "Social Sciences",
     notes: [
     ],
@@ -64,6 +69,7 @@ export const AP_SubjectsData = [
   {
     id: "macro",
     title: "AP Macroeconomics",
+    slug: "ap-macroeconomics",
     category: "Social Sciences",
     notes: [
     ],
@@ -71,6 +77,7 @@ export const AP_SubjectsData = [
   {
     id: "calc-bc",
     title: "AP Calculus BC",
+    slug: "ap-calculus-bc",
     category: "Math",
     notes: [
     ],
@@ -78,6 +85,7 @@ export const AP_SubjectsData = [
   {
     id: "stat",
     title: "AP Statistics",
+    slug: "ap-statistics",
     category: "Math",
     notes: [
     ],
@@ -85,6 +93,7 @@ export const AP_SubjectsData = [
   {
     id: "compt-sci-a",
     title: "AP Computer Science A",
+    slug: "ap-computer-science-a",
     category: "Computer Science",
     notes: [
     ],
@@ -92,6 +101,7 @@ export const AP_SubjectsData = [
   {
     id: "bio",
     title: "AP Biology",
+    slug: "ap-biology",
     category: "Science",
     notes: [
       {
@@ -108,6 +118,7 @@ export const AP_SubjectsData = [
   {
     id: "physics-c-mech",
     title: "AP Physics C: Mechanics",
+    slug: "ap-physics-c-mechanics",
     category: "Science",
     notes: [
     ],
@@ -115,6 +126,7 @@ export const AP_SubjectsData = [
   {
     id: "physics-c-elec",
     title: "AP Physics C: Electricity and Magnetism",
+    slug: "ap-physics-c-electricity-and-magnetism",
     category: "Science",
     notes: [
     ],
@@ -122,6 +134,7 @@ export const AP_SubjectsData = [
   {
     id: "chem",
     title: "AP Chemistry",
+    slug: "ap-chemistry",
     category: "Science",
     notes: [
     ],
@@ -130,6 +143,7 @@ export const AP_SubjectsData = [
   {
     id: "",
     title: "",
+    slug: "",
     category: "",
     notes: [
       {

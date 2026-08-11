@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 import { AP_SubjectsData, Categories } from '../data/data.js'
 
 export default function Subjects() {
-    const [selectedSubject, setSelectedSubject] = useState(null);
+    const { subjectSlug } = useParams();
+    const navigate = useNavigate();
+
+    const selectedSubject = subjectSlug
+        ? AP_SubjectsData.find((subject) => subject.slug === subjectSlug)
+        : null;
+
     const [subjectSearch, setSubjectSearch] = useState('');
     const [activeCategory, setActiveCategory] = useState('All');
     const filteredSubjects = AP_SubjectsData.filter((subject) => {
@@ -12,6 +19,21 @@ export default function Subjects() {
         const matchesCategory = activeCategory === 'All' || subject.category === activeCategory;
         return matchesSearch && matchesCategory;
     })
+
+    useEffect(() => {
+        if (subjectSlug) {
+            window.scrollTo(0, 0);
+        } else {
+            const savedPosition =
+                sessionStorage.getItem('subjectsScrollPosition');
+            if (savedPosition !== null) {
+                requestAnimationFrame(() => {
+                    window.scrollTo(0, Number(savedPosition));
+                });
+            }
+        }
+    }, [subjectSlug]);
+
     return (
         <>
             <Header />
@@ -74,7 +96,13 @@ export default function Subjects() {
                             <div 
                                 key={subject.id} 
                                 className="subjectCard w-full" 
-                                onClick={() => setSelectedSubject(subject)}
+                                onClick={() => {
+                                    sessionStorage.setItem(
+                                        'subjectsScrollPosition',
+                                        String(window.scrollY)
+                                    );
+                                    navigate(`/subjects/${subject.slug}`);
+                                }}
                             >
                                 <h1>{subject.title}</h1>
                             </div>
@@ -94,7 +122,7 @@ export default function Subjects() {
                         <div>
                             <button
                             className="backButton"
-                            onClick={() => setSelectedSubject(null)}
+                            onClick={() => navigate('/subjects')}
                             >
                             ← Back to All Subjects
                             </button>
