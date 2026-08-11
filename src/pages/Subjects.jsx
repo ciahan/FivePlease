@@ -1,0 +1,145 @@
+import { useState } from 'react';
+import Header from '../components/Header.jsx'
+import Footer from '../components/Footer.jsx'
+import { AP_SubjectsData, Categories } from '../data/data.js'
+
+export default function Subjects() {
+    const [selectedSubject, setSelectedSubject] = useState(null);
+    const [subjectSearch, setSubjectSearch] = useState('');
+    const [activeCategory, setActiveCategory] = useState('All');
+    const filteredSubjects = AP_SubjectsData.filter((subject) => {
+        const matchesSearch = subject.title.toLowerCase().includes(subjectSearch.toLowerCase());
+        const matchesCategory = activeCategory === 'All' || subject.category === activeCategory;
+        return matchesSearch && matchesCategory;
+    })
+    return (
+        <>
+            <Header />
+            <main>
+                <div className="page">  
+                    {!selectedSubject ? (
+                    /* SUBJECTS */
+                    <div className="w-full flex flex-col gap-12">
+                        {/* PAGE TITLE TEXT */}
+                        <div className="flex flex-col gap-2">
+                        <h0>
+                            Available Subjects
+                        </h0>
+                        <h2>Choose a subject to access notes and free resources</h2>          
+                        </div>
+
+                        {/* FILTERING METHODS */}
+                        <div className="flex flex-col gap-3">
+                        {/* SEARCH BAR */}
+                        <div className="searchBar">
+                            <input
+                            type="text"
+                            placeholder="Search for a subject..."
+                            value={subjectSearch}
+                            onChange={(e) => setSubjectSearch(e.target.value)}
+                            />
+                        </div>
+
+                        {/* CATEGORIES TO FILTER */}
+                        <div className="flex justify-center gap-4">
+                            {Categories.map((category) => {
+                            const isActive = activeCategory === category.name;
+                            return (
+                                <button
+                                key={category.id}
+                                className={
+                                    `category
+                                    ${activeCategory === category.name ? 'active' : ''}`
+                                }
+                                onClick={() => {
+                                    if (activeCategory === category.name) {
+                                    setActiveCategory('All');
+                                    } else {
+                                    setActiveCategory(category.name);
+                                    }
+                                }}
+                                >
+                                {category.name}
+                                </button>
+                            );
+                            })}
+                        </div>
+                        </div>
+
+                        {/* SUBJECTS DASHBOARD */}
+                        <div className="flex flex-col gap-3">
+                        {[...filteredSubjects]
+                            .sort((a, b) => a.title.localeCompare(b.title)) // sort by alphabetical order
+                            .map((subject) => (
+                            <div 
+                                key={subject.id} 
+                                className="subjectCard w-full" 
+                                onClick={() => setSelectedSubject(subject)}
+                            >
+                                <h1>{subject.title}</h1>
+                            </div>
+                            ))}
+                        </div>
+
+                        {/* NO MATCHING SUBJECTS MESSAGE (only relevant if something has been entered in the search bar) */}
+                        {filteredSubjects.length === 0 && (
+                        <h2> Sorry, no subjects match your search. </h2>
+                        )}
+                    </div>
+                    ) : (
+                    /* NOTES DETAIL */
+                    <div className="flex flex-col gap-8 w-full">
+                        <div className="flex flex-col gap-2">
+                        {/* BACK BUTTON */}
+                        <div>
+                            <button
+                            className="backButton"
+                            onClick={() => setSelectedSubject(null)}
+                            >
+                            ← Back to All Subjects
+                            </button>
+                        </div>
+
+                        {/* SUBJECT NOTES TITLE */}
+                        <h0>
+                            {selectedSubject.title} Notes
+                        </h0>
+                        </div>
+
+                    
+                        <div className="noteSection">
+                        {selectedSubject.notes.length === 0 ? (
+                            <h2> Notes incoming, please check in later! </h2>
+                        ) : (
+                            selectedSubject.notes.map((note) => (
+                            <div
+                                key = {note.id}
+                                className = "container"
+                            >
+                                <h1>{note.title} ({note.year})</h1>
+                                <div>
+                                <h2><strong>Platform:</strong> {note.platform}</h2>
+                                <h2><strong>Contributor(s):</strong> {note.contributors.join(', ')}</h2>
+                                </div>
+                                {note.description && <p className="description">{note.description}</p>}
+                                
+                                <a 
+                                href={note.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="buttonBig"
+                                >
+                                Open Notes
+                                </a>
+                            </div>
+                            ))
+                        )}
+                        </div>
+                    </div>
+                    )}
+                </div>
+            </main>
+            <Footer />
+        </>
+    )
+}
