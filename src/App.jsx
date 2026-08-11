@@ -294,6 +294,23 @@ function App() {
           >
             Subjects
           </a>
+          <a
+            href="#"
+            onClick = {
+              (e) => { e.preventDefault(); setCurrentPage('about-main'); }
+            }
+          >
+            Our Mission
+          </a>
+          <a
+            href="#"
+            onClick = {
+              (e) => { e.preventDefault(); setCurrentPage('about-team'); }
+            }
+          >
+            Meet the Team
+          </a>
+          {/* SCRAPPED DROWN-DOWN MENU COMBINING ABOUT-MAIN AND ABOUT-TEAM
           <div className="navItemWithDropdown">
             <span> About </span>
             <div className="dropdownMenu">
@@ -311,6 +328,7 @@ function App() {
               </a>
             </div>
           </div>
+          */}
         </nav>
       </header>
       {/* HEADER END */}
