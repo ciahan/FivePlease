@@ -207,7 +207,7 @@ const TeamMembers = {
     },
     {
       id: "liyah",
-      name: "Liya Henock",
+      name: "Liya Henok",
       headshot: "liya_headshot.png",
       role: "Social Media Director",
       bio: "Hi, my name is Liya Henok, I am a Junior at Montgomery Blair HS, and a little about me is that I love driving go-karts,  my fav dessert is tiramisu, I have played violin for 6 years and I play soccer, basketball, and volleyball!"
