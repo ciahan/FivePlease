@@ -217,16 +217,16 @@ const TeamMembers = {
   {
       id: "ruth",
       name: "Ruth",
-      headshot: "",
+      headshot: "ruth_headshot.png",
       role: "AP Gov Course Manager",
-      bio: "",
+      bio: "Hi! My name is Ruth, and I’m a junior at Montgomery Blair High School in Silver Spring, MD. I’m excited to be a Course Manager for AP Government and look forward to the expansion of AP prep to all students around the nation. I enjoy learning new instruments, drinking boba, and lifting in my free time :)",
     },
     {
       id: "",
       name: "Karizma",
-      headshot: "",
+      headshot: "karizma_headshot.png",
       role: "AP Psych Course Manager",
-      bio: "",
+      bio: "My name is Karizma and I will be the Course Manager for AP Psychology! I’m a junior at Montgomery Blair High School here at Maryland and something I like to do in my free time is to study theology and philosophy!",
     },
   ],
 }
