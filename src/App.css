@@ -12,9 +12,9 @@
   justify-content: space-between;
 
   padding: 1.1rem;
-  /* border-bottom: 1px solid var(--mediumPink); */
+  /* border-bottom: 1px solid var(--pink2); */
 
-  background-color: var(--lightPink);
+  background-color: var(--pink1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 1px 5px var(--shadow);
@@ -54,8 +54,8 @@
 }
 
 .searchBar {
-  background-color: var(--lightPurple);
-  border: 1px solid var(--darkPurple);
+  background-color: var(--purple1);
+  border: 1px solid var(--purple3);
   border-radius: 16px;
   box-shadow: var(--shadow);
   box-sizing: border-box;
@@ -70,12 +70,12 @@
 }
 
 .searchBar:focus-within {
-  box-shadow: 0 0 0 1px var(--darkPurple);
+  box-shadow: 0 0 0 1px var(--purple3);
 }
 
 .subjectCard {
-  background-color: var(--lightPurple);
-  border: 1px solid var(--darkPurple);
+  background-color: var(--purple1);
+  border: 1px solid var(--purple3);
   border-radius: 24px;
   box-shadow: var(--shadow);
   box-sizing: border-box;
@@ -95,28 +95,28 @@
 }
 
 .category {
-  background-color: var(--lightPink);
+  background-color: var(--pink1);
   border-radius: 15px;
   box-sizing: border-box;
   padding: 0.2rem;
   padding-inline: 0.8rem;
   box-shadow: 0 1px 5px var(--shadow);
   align-self: flex-start;
-  border: 1px solid var(--mediumPink);
+  border: 1px solid var(--pink2);
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 0 1px var(--mediumPink);
+    box-shadow: 0 0 0 1px var(--pink2);
   }
 
   &.active {
     cursor: pointer;
-    box-shadow: 0 0 0 1px var(--mediumPink);
+    box-shadow: 0 0 0 1px var(--pink2);
   }
 }
 
 .buttonBig {
-  background-color: var(--lightPurple);
+  background-color: var(--purple1);
   border-radius: 10px;
   box-shadow: 0 1px 5px var(--shadow);
   box-sizing: border-box;
@@ -147,7 +147,7 @@
 }
 
 .container {
-  background-color: var(--lighterGreen);
+  background-color: var(--green0);
   border-radius: 30px;
   box-sizing: border-box;
   padding: 4rem;
@@ -160,8 +160,8 @@
 }
 
 .container2 {
-  background-color: var(--lightYellow);
-  border: 1px solid var(--darkYellow);
+  background-color: var(--yellow1);
+  border: 1px solid var(--yellow3);
   border-radius: 16px;
   box-shadow: var(--shadow);
   box-sizing: border-box;
@@ -209,7 +209,7 @@ input:focus {
 
 .footer {
   padding: 2rem;
-  border-top: 1px solid var(--mediumGreen);
+  border-top: 1px solid var(--green2);
 
   display: flex;
   flex-direction: column;

@@ -36,9 +36,9 @@
   position: absolute;
   top: 100%; /* Positions it directly below the nav link */
   right: 0;
-  background-color: var(--lightGreen); /* Match your app background */
+  background-color: var(--green1); /* Match your app background */
   min-width: 160px;
-  border: 1px solid var(--darkGreen);
+  border: 1px solid var(--green3);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   padding: 0.5rem 0;
@@ -66,26 +66,20 @@
   --text2: #4c485f;
   --shadow: rgba(45, 42, 61, 0.377);
   --shadow2: rgb(45, 42, 61, 0.5);
-  --lighterGreen: #f9fff9;
-  --lightGreen: #deffdb;
-  --mediumGreen: #87ca81;
-  --darkGreen: #2f6b3a;
-  --lightPink: #ffe3fa;
-  --mediumPink: lab(61.96% 53.07 -26.71);
-  --darkPink: #a3348f;
-  --lightYellow: #fffdd0;
-  --darkYellow: #8a7a1a;
-  --lightPurple: #e7d1ff;
-  --mediumPurple: lab(52.67% 44.88 -50.89);
-  --darkPurple: #6b3fa0;
-  --text-h: #08060d;
-  --bg: var(--lightGreen);
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
+  --green0: #f9fff9;
+  --green1: #deffdb;
+  --green2: #87ca81;
+  --green3: #2f6b3a;
+  --pink1: #ffe3fa;
+  --pink2: lab(61.96% 53.07 -26.71);
+  --pink3: #a3348f;
+  --yellow1: #fffdd0;
+  --yellow3: #8a7a1a;
+  --purple1: #e7d1ff;
+  --purple2: lab(52.67% 44.88 -50.89);
+  --purple3: #6b3fa0;
+
+  --bg: var(--green1);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -115,17 +109,24 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --text: #e0dcf9;
+    --text2: #c2b9f0;
+    --shadow: rgba(45, 42, 61, 0.377);
+    --shadow2: rgb(45, 42, 61, 0.5);
+    --green0: #133b1a;
+    --green1: #0e1c10;
+    --green2: #3d7438;
+    --green3: #deffdb;
+    --pink1: #502648;
+    --pink2: #da6fc6;
+    --pink3: #ffe3fa;
+    --yellow1: #8a7a1a;
+    --yellow3: #fffdd0;
+    --purple1: #6b3fa0;
+    --purple2: #9b63d6;
+    --purple3: #e7d1ff;
+
+    --bg: var(--green1);
   }
 
   #social .button-icon {
@@ -139,7 +140,7 @@ body {
 }
 
 .highlight-text {
-  background-color: var(--lightPink);
+  background-color: var(--pink1);
 }
 
 .underline-text {
