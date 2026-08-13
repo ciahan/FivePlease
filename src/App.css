@@ -12,12 +12,12 @@
   justify-content: space-between;
 
   padding: 1.1rem;
-  /* border-bottom: 1px solid var(--pink2); */
+  border-bottom: 1px solid var(--pink2);
 
   background-color: var(--pink1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 1px 5px var(--shadow);
+  box-shadow: 0 0.5px 5px var(--shadow);
 
   @media (min-width: 1024px) {
     padding: 1.5rem;
@@ -56,31 +56,40 @@
 .searchBar {
   background-color: var(--purple1);
   border: 1px solid var(--purple3);
-  border-radius: 16px;
+  border-radius: 19px;
   box-shadow: var(--shadow);
   box-sizing: border-box;
   padding: 0.5rem;
   padding-inline: 1rem;
   width: 100%;
+  box-shadow: 0 1px 5px var(--shadow);
 
   display: flex;
   flex-direction: column;
   align-items: right;
   gap: 1rem;
+
+  input {
+    &::placeholder {
+      color: var(--purple2);
+    }
+  }
 }
 
 .searchBar:focus-within {
-  box-shadow: 0 0 0 1px var(--purple3);
+  box-shadow:
+    0 0 0 1px var(--purple3),
+    0 1px 5px var(--shadow2);
 }
 
 .subjectCard {
   background-color: var(--purple1);
   border: 1px solid var(--purple3);
   border-radius: 24px;
-  box-shadow: var(--shadow);
   box-sizing: border-box;
   padding: 2.5rem;
   width: 100%;
+  box-shadow: 0 1px 5px var(--shadow);
 
   display: flex;
   flex-direction: column;
@@ -90,7 +99,9 @@
   &:hover {
     cursor: pointer;
     transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow:
+      0 0 0 1px var(--purple3),
+      0 2px 9px var(--shadow2);
   }
 }
 
@@ -102,25 +113,30 @@
   padding-inline: 0.8rem;
   box-shadow: 0 1px 5px var(--shadow);
   align-self: flex-start;
-  border: 1px solid var(--pink2);
+  border: 1px solid var(--pink3);
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0 0 1px var(--pink2);
+    box-shadow:
+      0 0 0 1px var(--pink3),
+      0 1px 5px var(--shadow2);
   }
 
   &.active {
     cursor: pointer;
-    box-shadow: 0 0 0 1px var(--pink2);
+    box-shadow:
+      0 0 0 1px var(--pink3),
+      0 1px 5px var(--shadow2);
   }
 }
 
 .buttonBig {
   background-color: var(--purple1);
-  border-radius: 10px;
+  border: 1px solid var(--purple3);
+  border-radius: 28px;
   box-shadow: 0 1px 5px var(--shadow);
   box-sizing: border-box;
-  padding:  1.5rem;
+  padding:  1.75rem;
 
   display: flex;
   flex-direction: column;
@@ -130,7 +146,9 @@
   &:hover {
     cursor: pointer;
     transform: translateY(-1px);
-    box-shadow: 2px 4px 7px var(--shadow2);
+    box-shadow:
+      0 0 0 1px var(--purple3),
+      0 2px 9px var(--shadow2);
   }
 }
 
@@ -148,7 +166,8 @@
 
 .container {
   background-color: var(--green0);
-  border-radius: 30px;
+  border: 1px solid var(--green3);
+  border-radius: 55px;
   box-sizing: border-box;
   padding: 4rem;
   box-shadow: 0 1px 5px var(--shadow);
@@ -162,10 +181,11 @@
 .container2 {
   background-color: var(--yellow1);
   border: 1px solid var(--yellow3);
-  border-radius: 16px;
+  border-radius: 45px;
   box-shadow: var(--shadow);
   box-sizing: border-box;
-  padding: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 1px 5px var(--shadow);
 
   display: flex;
   flex-direction: column;
@@ -209,7 +229,7 @@ input:focus {
 
 .footer {
   padding: 2rem;
-  border-top: 1px solid var(--green2);
+  border-top: 1.5px solid var(--green2);
 
   display: flex;
   flex-direction: column;
