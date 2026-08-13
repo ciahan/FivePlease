@@ -4,9 +4,17 @@ export default function Header() {
     return (
         <header className="header">
             {/* Logo */}
-            <Link to="/">
-                FivePlease!
-            </Link>
+            <div className="flex gap-6 items-center">
+                <Link to="/">
+                    <img
+                        src={"/Logo/keytofive_logo.png"}
+                        style = {{ width: "auto", height: "50px" }}
+                    />
+                </Link>
+                <Link to="/">
+                    FivePlease!
+                </Link>
+            </div>
             {/* Navigation buttons */}
             <nav className="navButtons">
                 <Link to="/">
