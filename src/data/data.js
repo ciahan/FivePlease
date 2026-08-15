@@ -196,7 +196,7 @@ export const TeamMembers = {
       id: "ciaraf",
       name: "Ciara Feng",
       headshot: "ciara_headshot.png",
-      role: "President & Web Design Director",
+      role: "Co-Founder & Web Design Director",
       bio: "Ciara Feng is a Junior at Montgomery Blair High School. She is a self-proclaimed perfectionist who finds comfort in taking extremely detailed notes (like the ones she wrote for AP US History, which consisted of 3302 flashcards.) Besides being interested in computer science, she also loves art, crochet, singing, playing games, and her cats Pumpkin and Melon.",
     },
     {

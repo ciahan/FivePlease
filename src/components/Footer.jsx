@@ -14,7 +14,7 @@ export default function Footer() {
         </strong>
       </p>
       <p>
-        © 2026 FivePlease! All resources are provided free of charge.
+        © 2026 Key to Five All resources are provided free of charge.
       </p>
     </footer>
   )

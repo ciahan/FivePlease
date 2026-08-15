@@ -77,7 +77,7 @@ export default function Mssion() {
                             </div>
                             <h2>
                             We truly believe that financial barriers shouldn't determine students’ access to
-                            resources. FivePlease! exists to break these barriers and give all students the
+                            resources. Key to Five exists to break these barriers and give all students the
                             opportunity to succeed, regardless of their background. 
                             </h2>
                         </div>

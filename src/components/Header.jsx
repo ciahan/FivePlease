@@ -12,7 +12,7 @@ export default function Header() {
                     />
                 </Link>
                 <Link to="/">
-                    FivePlease!
+                    Key to Five
                 </Link>
             </div>
             {/* Navigation buttons */}
