@@ -14,7 +14,7 @@ export default function Mssion() {
                         {/* OUR MISSION TEXT */}
                         <div className="flex flex-col gap-8">
                             <h2>
-                            <span className="highlight-text">fiveplease.org</span> was created with a very simple goal in mind.
+                            <span className="highlight-text">keytofive.org</span> was created with a very simple goal in mind.
                             However, to explain how it was created, we must start at the very beginning. 
                             </h2>
                             <div className="flex gap-4 items-center">
@@ -61,7 +61,7 @@ export default function Mssion() {
                                 During the summer of junior year, I realized that something could be done to
                                 help make these notes available to all students across the world. Students that
                                 couldn’t afford textbooks or resources could use our notes and become successful
-                                exam takers. That was how the idea of <span className="highlight-text">fiveplease.org</span> started. 
+                                exam takers. That was how the idea of <span className="highlight-text">keytofive.org</span> started. 
                             </h2>
                             </div>
                             <div className="flex gap-4 items-center">
