@@ -6,13 +6,14 @@ export const AP_SubjectsData = [
     category: "History",
     notes: [
       {
-        id: "us-history1",
+        id: 1,
         title: "AP US History Note Set",
+        slug: "note-set-2024-1",
         platform: "RemNote",
         contributors: ["Ciara Feng",],
         year: "2024",
         description: "",
-        url: "https://remnote.com/a/AP-Bio/69dca40ff4246e2792279730",
+        url: "https://remnote.com/a/AP-United-States-History/69d9b91b1e66833915d6aea6",
       },
     ],
   },
@@ -23,14 +24,25 @@ export const AP_SubjectsData = [
     category: "History",
     notes: [
       {
-        id: "us-gov1",
+        id: 1,
         title: "AP US Government Note Set",
+        slug: "note-set-2025-1",
         platform: "RemNote",
         contributors: ["Ciara Feng",],
         year: "2025",
         description: "",
         url: "https://remnote.com/a/AP-Gov/69fd42041fc7a5f616eac4db",
       },
+      {
+        id: 2,
+        title: "AP US Government Note Set",
+        slug: "note-set-2026-1",
+        platform: "PDF",
+        contributors: ["Ruth",],
+        year: "2026",
+        desscription: "",
+        url: "",
+      }
     ],
   },
   {
@@ -42,6 +54,7 @@ export const AP_SubjectsData = [
       {
         id: "psych-1",
         title: "AP Psychology Note Set",
+        slug: "note-set-2025-1",
         platform: "RemNote",
         contributors: ["Ciara Feng",],
         year: "2025",
@@ -107,11 +120,70 @@ export const AP_SubjectsData = [
       {
         id: "bio-1",
         title: "AP Biology Note Set",
+        slug: "note-set-2025-1",
         platform: "RemNote",
         contributors: ["Ciara Feng",],
         year: "2025",
         description: "",
-        url: "https://remnote.com/a/AP-Bio/69dca40ff4246e2792279730",
+        url: "https://remnote.com/a/AP-Bio/69d9b99a5e1c4c54ca2ecd43",
+        
+        units: [
+          {
+            number: 1,
+            name: "Chemistry of Life",
+            url: "https://www.remnote.com/a/Unit-1%253A-Chemistry-of-Life/69dca40f5cb5b2441e7a263c",
+            subUnits: [
+              {
+                name: "Intro to Biology",
+                slug: "intro-to-biology",
+                url: "https://www.remnote.com/a/Intro-to-Biology/69dca40fa5790b8b48f885c0",
+              },
+              {
+                name: "Water (H20)",
+                slug: "water-h20",
+                url: "",
+              },
+              {
+                name: "Acids and Bases",
+                slug: "acids-and-bases",
+                url: "",
+              },
+              {
+                name: "Organic Molecules",
+                slug: "organic-molecules",
+                url: "",
+
+                subunits: [
+                  {
+                    name: "Intro to Organic Molecules",
+                    slug: "intro",
+                    url: "",
+                  },
+                  {
+                    name: "Carbohydrates",
+                    slug: "carbohydrates",
+                    url: "",
+                  },
+                  {
+                    name: "Proteins",
+                    slug: "proteins",
+                    url: "",
+                  },
+                  {
+                    name: "Lipids",
+                    slug: "lipids",
+                    url: "",
+                  },
+                  {
+                    name: "Nucleic Acids",
+                    slug: "nucleic-acids",
+                    url: "",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
     ],
   },
@@ -154,6 +226,9 @@ export const AP_SubjectsData = [
         year: "",
         description: "",
         url: "",
+
+        subunits: [
+        ],
       },
     ],
   },

@@ -106,7 +106,7 @@ export default function Subjects() {
                             >
                                 <h1>{subject.title}</h1>
                             </div>
-                            ))}
+                        ))}
                         </div>
 
                         {/* NO MATCHING SUBJECTS MESSAGE (only relevant if something has been entered in the search bar) */}
@@ -135,33 +135,33 @@ export default function Subjects() {
                         </div>
 
                     
-                        <div className="noteSection">
-                        {selectedSubject.notes.length === 0 ? (
-                            <h2> Notes incoming, please check in later! </h2>
-                        ) : (
-                            selectedSubject.notes.map((note) => (
-                            <div
-                                key = {note.id}
-                                className = "container"
-                            >
-                                <h1>{note.title} ({note.year})</h1>
-                                <div>
-                                <h2><strong>Platform:</strong> {note.platform}</h2>
-                                <h2><strong>Contributor(s):</strong> {note.contributors.join(', ')}</h2>
-                                </div>
-                                {note.description && <p className="description">{note.description}</p>}
-                                
-                                <a 
-                                href={note.url} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="buttonBig"
+                        <div className="flex flex-col gap-4">
+                            {selectedSubject.notes.length === 0 ? (
+                                <h2> Notes incoming, please check in later! </h2>
+                            ) : (
+                                selectedSubject.notes.map((note) => (
+                                <div
+                                    key = {note.id}
+                                    className = "noteContainer"
                                 >
-                                Open Notes
-                                </a>
-                            </div>
-                            ))
-                        )}
+                                    <h1>{note.title} ({note.year})</h1>
+                                    <div>
+                                        <h3><span className="highlight-text">Platform:</span> {note.platform}</h3>
+                                        <h3><span className="highlight-text">Contributor(s):</span> {note.contributors.join(', ')}</h3>
+                                    </div>
+                                    {note.description && <p className="description">{note.description}</p>}
+                                    
+                                    <a 
+                                    href={note.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="buttonBig"
+                                    >
+                                    Open Notes
+                                    </a>
+                                </div>
+                                ))
+                            )}
                         </div>
                     </div>
                     )}
